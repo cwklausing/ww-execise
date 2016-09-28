@@ -53,10 +53,29 @@ body {
 h1 {
   font-size: 1.6em; }
 
+h2 {
+  font-size: .9em; }
+
+hr {
+  width: 100px;
+  margin-bottom: 20px; }
+
+p {
+  line-height: 1.6em; }
+
 .wrapper {
   min-width: 300px;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
+
+.text-wrap {
+  text-align: center;
+  margin: 0 10%; }
+
+.v-center {
+  display: flex;
+  align-items: center; }
 
 .overlay {
   position: absolute;
@@ -116,25 +135,46 @@ header {
       padding: 15px; }
 
 main .cover {
-  display: flex;
-  align-items: center;
   background-image: url("../images/westwerk-office-1.jpg");
   background-position: 50% bottom;
   background-size: cover;
-  height: 400px;
+  height: 600px;
   width: 100%; }
 main .overlay {
   background-color: #282828;
-  height: 400px;
+  height: 600px;
   width: 100%;
   opacity: .5; }
+main .text-wrap {
+  z-index: 1; }
 main h1 {
   font-weight: bold;
   padding: 0 10%;
-  vertical-align: middle;
-  color: white;
+  color: white; }
+
+.philosophy {
+  height: 400px; }
+  .philosophy h2 {
+    font-weight: 800;
+    text-transform: uppercase; }
+
+.boise .box-pic {
+  background-image: url("../images/boise-state.jpg"); }
+
+.rush-river .box-pic {
+  background-image: url("../images/rush-river.jpg"); }
+
+.box-pic {
+  background-size: cover;
+  background-position: center top;
+  height: 300px; }
+
+.client-text {
+  height: 400px;
   text-align: center;
-  z-index: 1; }
+  background-color: #47b5a2; }
+  .client-text img {
+    height: 80px; }
 
 /**
 * Small screen styling
