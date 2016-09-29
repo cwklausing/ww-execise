@@ -1,0 +1,128 @@
+body {
+  font: 100% $font-stack;
+}
+h1 {
+  font-weight: 600;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  color: white;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+p {
+  line-height: 1.6em;
+}
+a {
+  text-decoration: none;
+  color: $nav-links;
+  font-size: .7em;
+}
+.philosophy {
+  h2 {
+    font-weight: 800;
+  }
+}
+
+.client-text {
+  text-align: center;
+}
+
+.teal-button {
+  a, p {
+    color: white;
+    width: 100%;
+    letter-spacing: 1.5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  a:hover {
+    cursor: pointer;
+  }
+}
+
+.values {
+  h2 {
+    font-weight: 700;
+  }
+  h3 {
+    float: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding: 15px;
+  }
+}
+
+.value-text {
+    color: white;
+}
+
+.emp-info {
+  .text-wrap {
+    color: white;
+    h2 {
+      font-size: 1.5em;
+      font-weight: 600;
+      line-height: 1.5em;
+      text-transform: capitalize;
+    }
+    p {
+      text-transform: uppercase;
+      font-size: .8em;
+    }
+  }
+}
+
+@media (min-width: 570px) {
+  header {
+    nav {
+      li {
+        a:hover {
+          color: $ww-teal;
+        }
+      }
+    }
+  }
+  .clients {
+    .text-wrap {
+      p {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.4em;
+  }
+  .value-dropdown {
+    h3 {
+      padding: 25px;
+      font-size: 1.2em;
+    }
+  }
+  .value-text {
+    p {
+      font-size: 1.2em;
+    }
+  }
+  @media (min-width: 1020px) {
+    .clients {
+      .text-wrap p {
+        font-size: 1em;
+      }
+    }
+  }
+}

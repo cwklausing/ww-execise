@@ -4,30 +4,14 @@
 /**
 * Custom CSS
 */
-body {
-  font: 100% $font-stack;
-}
-h1 {
-  font-weight: 600;
-  font-size: 1.6em;
-  letter-spacing: 1px;
-  line-height: 1.5em;
-  color: white;
-}
-h2 {
-  font-size: 1.3em;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+
+@import 'fonts';
+
 hr {
   width: 150px;
   margin-bottom: 30px;
 }
-p {
-  line-height: 1.6em;
-}
+
 .wrapper {
   min-width: 300px;
   position: absolute;
@@ -57,12 +41,6 @@ p {
 
 .ww-title {
   margin: 50px 0;
-}
-
-a {
-  text-decoration: none;
-  color: $nav-links;
-  font-size: .7em;
 }
 
 header {
@@ -143,9 +121,6 @@ main {
 
 .philosophy {
   height: 400px;
-  h2 {
-    font-weight: 800;
-  }
 }
 
 .boise {
@@ -168,7 +143,6 @@ main {
 
 .client-text {
   height: 400px;
-  text-align: center;
   background-color: $ww-teal;
   color: $background;
   img {
@@ -193,24 +167,8 @@ main {
   margin: 30px auto 0;
   width: 200px;
   height: 40px;
-  a, p {
-    color: white;
-    width: 100%;
-    letter-spacing: 1.5px;
-    font-size: 1em;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  a:hover {
-    cursor: pointer;
-  }
 }
 
-.values {
-  h2 {
-    font-weight: 700;
-  }
-}
 .value-wrap {
   margin: 40px;
 }
@@ -219,14 +177,6 @@ main {
   background-color: $ww-teal;
   margin-bottom: 2px;
   overflow: hidden;
-  h3 {
-    float: left;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: white;
-    padding: 15px;
-  }
   img {
     height: 5px;
     float: right;
@@ -238,7 +188,6 @@ main {
   display: none;
   background-color: $ww-grey;
   padding: 35px;
-  color: white;
 }
 .team {
   margin-bottom: 30px;
@@ -248,6 +197,7 @@ main {
   display: inline-block;
   width: 50%;
   img {
+    vertical-align: top;
     width: 100%;
   }
   .emp-info {
@@ -258,17 +208,6 @@ main {
     opacity: 0;
     .text-wrap {
       width: 100%;
-      color: white;
-      h2 {
-        font-size: 1.5em;
-        font-weight: 600;
-        line-height: 1.5em;
-        text-transform: capitalize;
-      }
-      p {
-        text-transform: uppercase;
-        font-size: .8em;
-      }
     }
   }
   .emp-info:hover {
@@ -329,9 +268,6 @@ footer {
       li {
         display: inline-block;
         margin: 0 10px;
-        a:hover {
-          color: $ww-teal;
-        }
       }
     }
   }
@@ -347,9 +283,6 @@ footer {
       margin: 0 10%;
       img {
         width: 70%;
-      }
-      p {
-        font-size: 0.8em;
       }
     }
   }
@@ -382,12 +315,6 @@ footer {
 * Medium screen sizing
 */
 @media (min-width: 820px) {
-  h1 {
-    font-size: 2em;
-  }
-  p {
-    font-size: 1.4em;
-  }
   .text-wrap {
     max-width: 720px;
   }
@@ -405,15 +332,6 @@ footer {
   }
   .value-dropdown {
     margin-bottom: 4px;
-    h3 {
-      padding: 25px;
-      font-size: 1.2em;
-    }
-  }
-  .value-text {
-    p {
-      font-size: 1.2em;
-    }
   }
   .employee {
     width: 25%;
@@ -429,9 +347,6 @@ footer {
 @media (min-width: 1020px) {
   .clients {
     height: 800px;
-    .text-wrap p {
-      font-size: 1em;
-    }
   }
   .client-text, .box-pic {
     height: 400px;
