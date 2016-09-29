@@ -16,9 +16,10 @@ h1 {
 }
 h2 {
   font-size: 1.3em;
-  font-weight: 800;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 hr {
   width: 100px;
@@ -39,16 +40,13 @@ p {
   margin: 0 10%;
 }
 
+.title {
+  height: 100px;
+}
+
 .v-center {
   display: flex;
   align-items: center;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  background-color: $dark-grey;
-  opacity: .9;
 }
 
 .helper {
@@ -94,6 +92,10 @@ header {
   }
   .overlay {
     height: 72px;
+    position: absolute;
+    width: 100%;
+    background-color: $dark-grey;
+    opacity: .9;
   }
 }
 
@@ -121,12 +123,13 @@ main {
     background-size: cover;
     height: 600px;
     width: 100%;
-  }
-  .overlay {
-    background-color: $dark-grey;
-    height: 600px;
-    width: 100%;
-    opacity: .5;
+    .overlay {
+      position: absolute;
+      background-color: $dark-grey;
+      height: 600px;
+      width: 100%;
+      opacity: .5;
+    }
   }
   .text-wrap {
     z-index: 1;
@@ -138,6 +141,9 @@ main {
 
 .philosophy {
   height: 400px;
+  h2 {
+    font-weight: 800px;
+  }
 }
 
 .boise {
@@ -164,8 +170,8 @@ main {
   background-color: $ww-teal;
   color: $background;
   img {
-    height: 90px;
     margin-bottom: 10px;
+    width: 90%;
   }
   h3 {
     margin-bottom: 20px;
@@ -179,17 +185,19 @@ main {
   background-color: $ww-grey;
 }
 
-.join-button {
+.teal-button {
   background-color: $ww-teal;
   justify-content: center;
   margin: 30px auto 0;
   width: 200px;
-  height: 25px;
-  a {
+  height: 40px;
+  a, p {
+    color: white;
     width: 100%;
     letter-spacing: 1.5px;
-    font-size: .3em;
+    font-size: 1em;
     text-transform: uppercase;
+    text-align: center;
   }
   a:hover {
     cursor: pointer;
@@ -221,12 +229,71 @@ main {
   img {
     height: 5px;
     float: right;
-    margin: 24px ;
+    margin: 24px 24px 24px 0;
   }
 }
 
 .value-text {
   display: none;
+  background-color: $ww-grey;
+  padding: 35px;
+  color: white;
+}
+.team {
+  margin-bottom: 30px;
+}
+.employee {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  img {
+    width: 100%;
+  }
+  .emp-info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    .text-wrap {
+      width: 100%;
+      color: white;
+      h2 {
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-transform: capitalize;
+      }
+      p {
+        text-transform: uppercase;
+        font-size: .8em;
+      }
+    }
+  }
+  .emp-info:hover {
+    opacity: 1;
+    background-color: $ww-teal-overlay;
+    cursor: pointer;
+  }
+}
+
+footer {
+  justify-content: space-between;
+  background-color: $dark-grey;
+  height: 72px;
+  .logo {
+    margin-left: 10%;
+  }
+  .social-media {
+    margin-right: 5%;
+    li {
+      display: inline-block;
+      margin-right: 25px;
+      img {
+        height: 25px;
+      }
+    }
+  }
 }
 
 /**

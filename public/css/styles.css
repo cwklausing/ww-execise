@@ -59,9 +59,10 @@ h1 {
 
 h2 {
   font-size: 1.3em;
-  font-weight: 800;
+  font-weight: 700;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 hr {
   width: 100px;
@@ -80,15 +81,12 @@ p {
   text-align: center;
   margin: 0 10%; }
 
+.title {
+  height: 100px; }
+
 .v-center {
   display: flex;
   align-items: center; }
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  background-color: #282828;
-  opacity: .9; }
 
 .helper {
   display: inline-block;
@@ -125,7 +123,11 @@ header {
       height: 22px;
       margin: 25px 0; }
   header .overlay {
-    height: 72px; }
+    height: 72px;
+    position: absolute;
+    width: 100%;
+    background-color: #282828;
+    opacity: .9; }
 
 .side-menu {
   position: fixed;
@@ -147,11 +149,12 @@ main .cover {
   background-size: cover;
   height: 600px;
   width: 100%; }
-main .overlay {
-  background-color: #282828;
-  height: 600px;
-  width: 100%;
-  opacity: .5; }
+  main .cover .overlay {
+    position: absolute;
+    background-color: #282828;
+    height: 600px;
+    width: 100%;
+    opacity: .5; }
 main .text-wrap {
   z-index: 1; }
 main h1 {
@@ -159,6 +162,8 @@ main h1 {
 
 .philosophy {
   height: 400px; }
+  .philosophy h2 {
+    font-weight: 800px; }
 
 .boise .box-pic {
   background-image: url("../images/boise-state.jpg"); }
@@ -177,8 +182,8 @@ main h1 {
   background-color: #35bfae;
   color: white; }
   .client-text img {
-    height: 90px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    width: 90%; }
   .client-text h3 {
     margin-bottom: 20px;
     font-size: .8em; }
@@ -187,18 +192,20 @@ main h1 {
   height: 300px;
   background-color: #53585a; }
 
-.join-button {
+.teal-button {
   background-color: #35bfae;
   justify-content: center;
   margin: 30px auto 0;
   width: 200px;
-  height: 25px; }
-  .join-button a {
+  height: 40px; }
+  .teal-button a, .teal-button p {
+    color: white;
     width: 100%;
     letter-spacing: 1.5px;
-    font-size: .3em;
-    text-transform: uppercase; }
-  .join-button a:hover {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center; }
+  .teal-button a:hover {
     cursor: pointer; }
 
 .values h2 {
@@ -222,10 +229,58 @@ main h1 {
   .value-dropdown img {
     height: 5px;
     float: right;
-    margin: 24px; }
+    margin: 24px 24px 24px 0; }
 
 .value-text {
-  display: none; }
+  display: none;
+  background-color: #53585a;
+  padding: 35px;
+  color: white; }
+
+.team {
+  margin-bottom: 30px; }
+
+.employee {
+  position: relative;
+  display: inline-block;
+  width: 50%; }
+  .employee img {
+    width: 100%; }
+  .employee .emp-info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; }
+    .employee .emp-info .text-wrap {
+      width: 100%;
+      color: white; }
+      .employee .emp-info .text-wrap h2 {
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-transform: capitalize; }
+      .employee .emp-info .text-wrap p {
+        text-transform: uppercase;
+        font-size: .8em; }
+  .employee .emp-info:hover {
+    opacity: 1;
+    background-color: rgba(53, 191, 174, 0.8);
+    cursor: pointer; }
+
+footer {
+  justify-content: space-between;
+  background-color: #282828;
+  height: 72px; }
+  footer .logo {
+    margin-left: 10%; }
+  footer .social-media {
+    margin-right: 5%; }
+    footer .social-media li {
+      display: inline-block;
+      margin-right: 25px; }
+      footer .social-media li img {
+        height: 25px; }
 
 /**
 * Small screen styling

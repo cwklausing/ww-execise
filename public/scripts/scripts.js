@@ -1,31 +1,52 @@
 $(function(){
-  /*Create function to grab four people from database.
-  Should also track position in the list so we don't
-  get repeat people.
+  var numEmployeePics = 0;
 
-  if there aren't four left, just take as many as there are.
-  */
-  function getEmployees () {
+  //On page load, get first 8 employees;
+  getEmployees(8);
+
+
+  function getEmployees (number) {
     $.ajax({
       url: '/data/Employees.json',
       method: 'GET'
     }).done(function(data) {
-      console.log(data);
+      var dataArray = data;
+      for(var i = 0; i < number; i++) {
+        if(numEmployeePics >= data.length) {
+          $('.load-more').css("display", "none");
+          return false;
+        }
+        appendEmployees(dataArray);
+        numEmployeePics++;
+      }
     })
   }
+
+  function appendEmployees(data) {
+    var $element = "<div class='employee'><img src='/images/employee_images/"
+    + data[numEmployeePics].image + "' />" + "<div class='emp-info v-center'><div class='text-wrap'><h2>" + data[numEmployeePics].name.first +
+    " " + data[numEmployeePics].name.last + "</h2><p>" + data[numEmployeePics].position + "</p></div></div></div>";
+    $('.team-wrap').append($element);
+  }
+
+  //'Load more' click
+  $('.load-more').on('click', function() {
+    getEmployees(4)
+  });
 
   // Team values click handler
   $('.value-dropdown').on('click', function() {
     if($(this).data("open")) {
-      console.log("closing");
-      $(this).siblings().slideToggle();
+      console.log('this');
+      $(this).siblings().slideUp();
       $(this).data("open", false);
     }
     else {
-      console.log("opening");
+      console.log('that');
+      $('.value-text').data("open", false);
       $('.value-text').slideUp();
       $(this).data("open", true);
-      $(this).siblings().slideToggle();
+      $(this).siblings().slideDown();
     }
   })
 
