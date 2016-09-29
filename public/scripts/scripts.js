@@ -36,13 +36,11 @@ $(function(){
 
   // Team values click handler
   $('.value-dropdown').on('click', function() {
-    if($(this).data("open")) {
-      console.log('this');
+    if($(this).data("open") === true) {
       $(this).siblings().slideUp();
       $(this).data("open", false);
     }
     else {
-      console.log('that');
       $('.value-text').data("open", false);
       $('.value-text').slideUp();
       $(this).data("open", true);

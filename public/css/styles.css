@@ -65,8 +65,8 @@ h2 {
   letter-spacing: 1px; }
 
 hr {
-  width: 100px;
-  margin-bottom: 20px; }
+  width: 150px;
+  margin-bottom: 30px; }
 
 p {
   line-height: 1.6em; }
@@ -93,6 +93,9 @@ p {
   height: 100%;
   vertical-align: middle; }
 
+.ww-title {
+  margin: 50px 0; }
+
 a {
   text-decoration: none;
   color: white;
@@ -108,7 +111,7 @@ header {
     display: none; }
   header .menu-button {
     position: fixed;
-    float: left;
+    top: 0;
     height: 40px;
     width: 40px;
     margin: 16px; }
@@ -117,11 +120,9 @@ header {
   header .logo {
     position: relative;
     width: 175px;
-    height: 72px;
     margin: 0 auto; }
     header .logo img {
-      height: 22px;
-      margin: 25px 0; }
+      height: 22px; }
   header .overlay {
     height: 72px;
     position: absolute;
@@ -145,7 +146,7 @@ header {
 
 main .cover {
   background-image: url("../images/westwerk-office-1.jpg");
-  background-position: 50% bottom;
+  background-position: 50% center;
   background-size: cover;
   height: 600px;
   width: 100%; }
@@ -163,7 +164,7 @@ main h1 {
 .philosophy {
   height: 400px; }
   .philosophy h2 {
-    font-weight: 800px; }
+    font-weight: 800; }
 
 .boise .box-pic {
   background-image: url("../images/boise-state.jpg"); }
@@ -209,8 +210,7 @@ main h1 {
     cursor: pointer; }
 
 .values h2 {
-  font-weight: 700;
-  margin-top: 40px; }
+  font-weight: 700; }
 
 .value-wrap {
   margin: 40px; }
@@ -270,8 +270,8 @@ main h1 {
 
 footer {
   justify-content: space-between;
-  background-color: #282828;
-  height: 72px; }
+  background-color: #15181b;
+  height: 100px; }
   footer .logo {
     margin-left: 10%; }
   footer .social-media {
@@ -283,11 +283,15 @@ footer {
         height: 25px; }
 
 /**
-* Small screen styling
+* Tablet screen styling
 */
 @media (min-width: 570px) {
   .sidebar, .menu-button {
     display: none; }
+
+  .text-wrap {
+    max-width: 520px;
+    margin: 0 auto; }
 
   header .logo {
     float: left;
@@ -305,6 +309,85 @@ footer {
       margin-right: 12%; }
     header nav li {
       display: inline-block;
-      margin: 0 2%; } }
+      margin: 0 10px; }
+      header nav li a:hover {
+        color: #35bfae; }
+
+  main .cover {
+    height: 500px; }
+    main .cover .overlay {
+      height: 500px; }
+
+  .clients {
+    height: 600px; }
+    .clients .text-wrap {
+      margin: 0 10%; }
+      .clients .text-wrap img {
+        width: 70%; }
+      .clients .text-wrap p {
+        font-size: 0.8em; }
+
+  .client-text, .box-pic {
+    width: 50%;
+    height: 300px; }
+
+  .boise .box-pic {
+    float: left; }
+  .boise .client-text {
+    float: right; }
+
+  .rush-river .box-pic {
+    float: right; }
+  .rush-river .client-text {
+    float: left; }
+
+  .employee {
+    width: 33%; } }
+/**
+* Medium screen sizing
+*/
+@media (min-width: 820px) {
+  h1 {
+    font-size: 2em; }
+
+  p {
+    font-size: 1.4em; }
+
+  .text-wrap {
+    max-width: 720px; }
+
+  .teal-button {
+    width: 400px; }
+
+  header nav ul {
+    width: 300px; }
+  header nav li {
+    margin: 0 15px; }
+
+  .value-dropdown {
+    margin-bottom: 4px; }
+    .value-dropdown h3 {
+      padding: 25px;
+      font-size: 1.2em; }
+
+  .value-text p {
+    font-size: 1.2em; }
+
+  .employee {
+    width: 25%; }
+
+  footer .social-media li img {
+    height: 15px; } }
+/**
+* Large screen sizing
+*/
+@media (min-width: 1020px) {
+  .clients {
+    height: 800px; }
+    .clients .text-wrap p {
+      font-size: 1em; }
+
+  .client-text, .box-pic {
+    height: 400px; } }
 
 /*# sourceMappingURL=styles.css.map */

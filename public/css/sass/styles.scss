@@ -22,8 +22,8 @@ h2 {
   letter-spacing: 1px;
 }
 hr {
-  width: 100px;
-  margin-bottom: 20px;
+  width: 150px;
+  margin-bottom: 30px;
 }
 p {
   line-height: 1.6em;
@@ -55,6 +55,10 @@ p {
   vertical-align: middle;
 }
 
+.ww-title {
+  margin: 50px 0;
+}
+
 a {
   text-decoration: none;
   color: $nav-links;
@@ -72,7 +76,7 @@ header {
   }
   .menu-button {
     position: fixed;
-    float: left;
+    top: 0;
     height: 40px;
     width: 40px;
     margin: 16px;
@@ -83,11 +87,9 @@ header {
   .logo {
     position: relative;
     width: 175px;
-    height: 72px;
     margin: 0 auto;
     img {
       height: 22px;
-      margin: 25px 0;
     }
   }
   .overlay {
@@ -119,7 +121,7 @@ header {
 main {
   .cover {
     background-image: url('../images/westwerk-office-1.jpg');
-    background-position: 50% bottom;
+    background-position: 50% center;
     background-size: cover;
     height: 600px;
     width: 100%;
@@ -142,7 +144,7 @@ main {
 .philosophy {
   height: 400px;
   h2 {
-    font-weight: 800px;
+    font-weight: 800;
   }
 }
 
@@ -207,7 +209,6 @@ main {
 .values {
   h2 {
     font-weight: 700;
-    margin-top: 40px;
   }
 }
 .value-wrap {
@@ -279,8 +280,8 @@ main {
 
 footer {
   justify-content: space-between;
-  background-color: $dark-grey;
-  height: 72px;
+  background-color: $footer-black;
+  height: 100px;
   .logo {
     margin-left: 10%;
   }
@@ -297,12 +298,16 @@ footer {
 }
 
 /**
-* Small screen styling
+* Tablet screen styling
 */
 
 @media (min-width: 570px) {
   .sidebar, .menu-button {
     display: none;
+  }
+  .text-wrap {
+    max-width: 520px;
+    margin: 0 auto;
   }
   header {
     .logo {
@@ -323,8 +328,112 @@ footer {
       }
       li {
         display: inline-block;
-        margin: 0 2%;
+        margin: 0 10px;
+        a:hover {
+          color: $ww-teal;
+        }
       }
     }
+  }
+  main .cover {
+    height: 500px;
+    .overlay {
+      height: 500px;
+    }
+  }
+  .clients {
+    height: 600px;
+    .text-wrap {
+      margin: 0 10%;
+      img {
+        width: 70%;
+      }
+      p {
+        font-size: 0.8em;
+      }
+    }
+  }
+  .client-text, .box-pic {
+    width: 50%;
+    height: 300px;
+  }
+  .boise {
+    .box-pic {
+      float: left;
+    }
+    .client-text {
+      float: right;
+    }
+  }
+  .rush-river {
+    .box-pic {
+      float: right;
+    }
+    .client-text {
+      float: left;
+    }
+  }
+  .employee {
+    width: 33%;
+  }
+}
+
+/**
+* Medium screen sizing
+*/
+@media (min-width: 820px) {
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.4em;
+  }
+  .text-wrap {
+    max-width: 720px;
+  }
+  .teal-button {
+    width: 400px;
+  }
+
+  header nav {
+    ul {
+      width: 300px;
+    }
+    li {
+      margin: 0 15px;
+    }
+  }
+  .value-dropdown {
+    margin-bottom: 4px;
+    h3 {
+      padding: 25px;
+      font-size: 1.2em;
+    }
+  }
+  .value-text {
+    p {
+      font-size: 1.2em;
+    }
+  }
+  .employee {
+    width: 25%;
+  }
+  footer .social-media li img {
+    height: 15px;
+  }
+}
+
+/**
+* Large screen sizing
+*/
+@media (min-width: 1020px) {
+  .clients {
+    height: 800px;
+    .text-wrap p {
+      font-size: 1em;
+    }
+  }
+  .client-text, .box-pic {
+    height: 400px;
   }
 }
